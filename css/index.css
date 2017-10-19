@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Roboto');
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* MENU */
+
+#header {
+  background-color: #AB9F77;
+  width: 100%;
+  top: 0;
+}
+
+.menu {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  margin: 10px 0 10px 10px;
+}
+
+.btn-menu {
+  display: none;
+  color: lighten(#AB9F77, 100%);
+  text-decoration: none;
+  font-size: 1em;
+  align-self: center;
+  margin-right: 10px;
+}
+
+img {
+  vertical-align: top;
+  width: 70px;
+}
+
+.menu .enlaces {
+  display: inline-block;
+  text-align: right;
+  font-family: 'Francois One', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+a {
+  color: lighten(#AB9F77, 100%);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em;
+}
+
+a:hover {
+  color: #696969;
+}
+
+i {
+  margin: 5px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background: #AB9F77;
+  border-radius: 10px;
+  margin: 0.4em 0.2em 0.2em 0.2em;
+}
+
+.miniatura {
+  background: #e0e7b6;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+}
+
+img {
+  width: 100%;
+  max-width: 160px;
+}
+
+.card-content p {
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  color: lighten(#AB9F77, 80%);
+  font-family: 'Roboto', sans-serif;
+}
+
+.articulos {
+  display: flex;
+  justify-content: center;
+}
+
+.articulo {
+  background: #AB9F77;
+  border-radius: 10px;
+  margin: 0.4em 0.2em 0.2em 0.2em;
+  padding: 0 0.2em 0 0.2em;
+}
+
+p {
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  color: lighten(#AB9F77, 80%);
+  font-family: 'Roboto', sans-serif;
+}
+
+h2, button {
+  text-align: center;
+  color: lighten(#AB9F77, 80%);
+  font-family: 'Francois One', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+hr {
+  margin-bottom: 1em;
+  height: 2px;
+  border: none;
+  background: #696969;
+}
+
+@media all and (min-width:0px) {
+  .cards, .articulos {
+    flex-flow: row wrap;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media all and (min-width:480px) {
+  .cards, .articulos {
+    flex-flow: row wrap;
+  }
+  .card {
+    width: 45%;
+  }
+  .articulo {
+    width: 90%;
+  }
+}
+
+@media all and (min-width:930px) {
+  .cards {
+    flex-flow: row wrap;
+  }
+  .card {
+    width: 30%;
+  }
+  .articulo {
+    width: 96%;
+  }
+}
+
+@media all and (max-width:780px) {
+  #header .menu {
+    flex-direction: column;
+    .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-start;
+      img {
+        width: 50px;
+      }
+      .btn-menu {
+        display: inline-block;
+      }
+    }
+    .enlaces {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      a {
+        border-bottom: 2px solid #696969;
+      }
+      a:hover {
+        background-color: lighten(#AB9F77, 10%);
+        color: lighten(#AB9F77, 100%);
+      }
+    }
+  }
+}

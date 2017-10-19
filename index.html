@@ -1,0 +1,104 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://use.fontawesome.com/ad4dcfdd90.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="menu">
+      <div class="logo">
+        <img src="images/aluno.png">
+        <a href="#" class="btn-menu" id="btn-menu"><i class="icono fa fa-bars fa-2x" aria-hidden="true"></i></a>
+      </div>
+      <div class="enlaces" id="enlaces">
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a href="teste.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Texto</a>
+        <a href="dataPendency.json"><i class="fa fa-paint-brush" aria-hidden="true"></i>Json</a>
+        <a href="404.html"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="cards">
+    <article class="card">
+      <div class="miniatura">
+        <img src="images/mpc-ico.png">
+      </div>
+      <div class="card-content">
+        <p><a href="developers.mp3">MP3</a>do vídeo especia programador</p>
+      </div>
+      <!-- .card-content -->
+
+    </article>
+    <!-- .card -->
+    <article class="card">
+      <div class="miniatura">
+        <img src="images/wav-ico.png">
+      </div>
+      <div class="card-content">
+        <p><a href="developers.wav">WAV</a>do vídeo especia programador</p>
+      </div>
+      <!-- .card-content -->
+    </article>
+    <!-- .card -->
+    <article class="card">
+      <div class="miniatura">
+        <img src="images/avi-icon.png">
+      </div>
+      <div class="card-content">
+        <p><a href="developers.mp4">Download</a>do vídeo especia programador</p>
+      </div>
+      <!-- .card-content -->
+    </article>
+    <!-- .card -->
+
+    <section class="articulos">
+      <div class="articulo" style="text-align: center">
+        <h2>Especie programador</h2>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Grande</button>
+        <button onclick="makeSmall()">Pequeno</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="movie" width="700" style="padding: 0.5em 0.8em 0.5em 0.8em; margin-right: 15px">
+          <source src="developers.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <script>
+      var myVideo = document.getElementById("movie");
+
+      function playPause() {
+        if (myVideo.paused)
+          myVideo.play();
+        else
+          myVideo.pause();
+      }
+
+      function makeBig() {
+        myVideo.width = 900;
+
+      }
+
+      function makeSmall() {
+        myVideo.width = 450;
+
+      }
+
+      function makeNormal() {
+        myVideo.width = 700
+
+      }
+    </script>
+
+</body>
+
+</html>
